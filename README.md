@@ -103,6 +103,6 @@ quotes = pullquoter(myText, 10);
 
 ## Limitations / Problems / TODO
 
-* This only works for English. Both the stopwords, stemmer and tokenized currently only support English. It could be     expanded for other western languages pretty easily, though.
+* This only works for English. The stopwords, stemmer and tokenized currently only support English. It could be     expanded for other western languages pretty easily, though.
 * This module has a runtime of something like O(n^2/2) where n is the number of sentences in the text. So maybe don't run it on a huge piece of text.
 * If you are doing something serious, maybe look into a [better text summarization algorithm](http://en.wikipedia.org/wiki/Automatic_summarization#Methods).
