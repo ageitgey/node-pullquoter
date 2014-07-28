@@ -1,0 +1,49 @@
+{
+  "name": "pullquoter",
+  "version": "0.0.0-dev",
+  "description": "Project description",
+  "homepage": "https://github.com/github-username/project-name",
+  "keywords": [],
+  "author": {
+    "name": "Your Name",
+    "email": "your@email"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/github-username/project-name"
+  },
+  "bugs": "https://github.com/github-username/project-name/issues",
+  "engines": {
+    "node": "0.8.x || 0.9.x || 0.10.x"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "bin": "bin",
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "optimist": "~0.6.1",
+    "natural": "~0.1.27",
+    "mathjs": "~0.25.0",
+    "memoizee": "~0.3.5",
+    "stopwords": "0.0.4"
+  },
+  "devDependencies": {
+    "coffee-script-redux": "2.0.0-beta7",
+    "commonjs-everywhere": "0.9.x",
+    "mocha": "~1.12.1",
+    "scopedfs": "~0.1.0",
+    "semver": "~2.1.0"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "https://github.com/github-username/project-name/blob/master/LICENSE"
+    }
+  ]
+}

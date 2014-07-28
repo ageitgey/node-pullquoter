@@ -1,0 +1,7 @@
+project-name-*.tgz
+.travis.yml
+.gitignore
+dist
+src
+test
+Makefile
