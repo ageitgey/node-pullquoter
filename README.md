@@ -2,6 +2,8 @@
 
 Automatically pull interesting quotes out of an article.
 
+[![Build Status](https://travis-ci.org/ageitgey/node-pullquoter.svg?branch=master)](https://travis-ci.org/ageitgey/node-pullquoter)
+
 You've probably seen [pull quotes](http://en.wikipedia.org/wiki/Pull_quote)
 like this in online articles:
 
