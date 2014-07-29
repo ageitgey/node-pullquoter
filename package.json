@@ -1,9 +1,14 @@
 {
   "name": "pullquoter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Automatically pull interesting quotes out of an article.",
   "homepage": "https://github.com/ageitgey/node-pullquoter",
-  "keywords": ["summarization", "summary", "quotes", "algorithm"],
+  "keywords": [
+    "summarization",
+    "summary",
+    "quotes",
+    "algorithm"
+  ],
   "author": {
     "name": "Adam Geitgey",
     "email": "ageitgey@gmail.com"
