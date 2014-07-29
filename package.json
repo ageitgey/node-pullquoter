@@ -1,22 +1,22 @@
 {
   "name": "pullquoter",
   "version": "0.0.1",
-  "description": "Project description",
-  "homepage": "https://github.com/github-username/project-name",
+  "description": "Automatically pull interesting quotes out of an article.",
+  "homepage": "https://github.com/ageitgey/node-pullquoter",
   "keywords": [],
   "author": {
-    "name": "Your Name",
-    "email": "your@email"
+    "name": "Adam Geitgey",
+    "email": "ageitgey@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/github-username/project-name"
+    "url": "git://github.com/ageitgey/node-pullquoter"
   },
-  "bugs": "https://github.com/github-username/project-name/issues",
+  "bugs": "https://github.com/ageitgey/node-pullquoter/issues",
   "engines": {
     "node": "0.8.x || 0.9.x || 0.10.x"
   },
-  "main": "lib/index.js",
+  "main": "lib/pullquoter.js",
   "directories": {
     "bin": "bin",
     "lib": "lib",
@@ -43,7 +43,7 @@
   "licenses": [
     {
       "type": "BSD",
-      "url": "https://github.com/github-username/project-name/blob/master/LICENSE"
+      "url": "https://github.com/ageitgey/node-pullquoter/blob/master/LICENSE"
     }
   ]
 }
