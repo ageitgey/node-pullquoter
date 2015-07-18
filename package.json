@@ -1,6 +1,6 @@
 {
   "name": "pullquoter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Automatically pull interesting quotes out of an article.",
   "homepage": "https://github.com/ageitgey/node-pullquoter",
   "keywords": [
