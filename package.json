@@ -49,7 +49,14 @@
     "opn-cli": "^1.0.0"
   },
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "registry": "http://registry.npmjs.org/",
+    "license": {
+      "exclude": [
+        "lib",
+        "src",
+        "test"
+      ]
+    }
   },
   "scripts": {
     "build": "rm -rf lib && coffee -cbo lib src",
