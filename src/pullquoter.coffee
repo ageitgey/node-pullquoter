@@ -1,8 +1,10 @@
+'use strict'
+
 math = require('mathjs')
 natural = require('natural')
 stopwords = require('stopwords').english
 memoize = require('memoizee')
-_ = require("lodash")
+_ = require('lodash')
 
 module.exports = pullquoter = (content, numberOfQuotes = 1) ->
   sentences = splitIntoSentences(content)
@@ -12,7 +14,7 @@ module.exports = pullquoter = (content, numberOfQuotes = 1) ->
 
 # Split raw text into an array of sentences
 splitIntoSentences = (content) ->
-  content = content.replace("\n", ". ")
+  content = content.replace('\n', '. ')
   sentences = content.match(/(.+?[\.|\!|\?](?:\s|$))/g) or []
 
   _.map sentences, (sentence) ->
@@ -20,14 +22,14 @@ splitIntoSentences = (content) ->
 
 # Strip stopwords from a sentence and return a list of stemmed tokens
 tokenizeSentence = (s) ->
-  tokenizer = new natural.WordPunctTokenizer();
-  words = tokenizer.tokenize(s.toLowerCase());
+  tokenizer = new natural.WordPunctTokenizer()
+  words = tokenizer.tokenize(s.toLowerCase())
   words = _.difference(words, stopwords)
   tokens = natural.PorterStemmer.tokenizeAndStem(words.join(' '))
   tokens
 
 # Calculate the 'similarity' of two sentences by counting the
-# number of commontokens between the two sentences
+# number of common tokens between the two sentences
 # (normalized by the length of the sentences)
 sentenceSimilarity = (s1, s2) ->
   if (s1.length + s2.length) == 0
@@ -91,4 +93,4 @@ getTopSentences = (sentences, sentenceScores, n) ->
   sentenceObjects = _.sortBy sentenceObjects, (sentence) ->
     sentence.orderInText
 
-  _.pluck(sentenceObjects, "sentence")
+  _.pluck(sentenceObjects, 'sentence')

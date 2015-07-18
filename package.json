@@ -19,7 +19,8 @@
   },
   "bugs": "https://github.com/ageitgey/node-pullquoter/issues",
   "engines": {
-    "node": "0.8.x || 0.9.x || 0.10.x"
+    "node": "0.8.x || 0.9.x || 0.10.x || 0.12.x",
+    "iojs": ">= 1.0.0"
   },
   "main": "lib/pullquoter.js",
   "directories": {
@@ -36,14 +37,28 @@
     "stopwords": "0.0.4"
   },
   "devDependencies": {
-    "coffee-script-redux": "2.0.0-beta7",
-    "commonjs-everywhere": "0.9.x",
-    "mocha": "~1.12.1",
-    "scopedfs": "~0.1.0",
-    "semver": "~2.1.0"
+    "assertive": "^2.0.0",
+    "coffee-coverage": "^0.6.2",
+    "coffee-script": "1.9.3",
+    "coffeelint": "^1.10.1",
+    "coffeelint-use-strict": "0.0.1",
+    "istanbul": "^0.3.17",
+    "mocha": "^2.2.5",
+    "nodemon": "^1.3.7",
+    "npub": "^2.2.0",
+    "opn-cli": "^1.0.0"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
   },
   "scripts": {
-    "test": "make test"
+    "build": "rm -rf lib && coffee -cbo lib src",
+    "watch": "coffee -wcbo lib src & nodemon -w src -w test -e coffee,js,json -x \"npm run test-run\"",
+    "pretest": "npm run build",
+    "test": "npm run test-run",
+    "test-run": "coffeelint src test && mocha && istanbul check-coverage",
+    "coverage": "istanbul report && opn --no-wait coverage/lcov-report/index.html",
+    "posttest": "npub verify"
   },
   "licenses": [
     {
