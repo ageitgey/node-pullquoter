@@ -1,6 +1,6 @@
 {
   "name": "pullquoter",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Automatically pull interesting quotes out of an article.",
   "homepage": "https://github.com/ageitgey/node-pullquoter",
   "keywords": [
@@ -49,7 +49,14 @@
     "opn-cli": "^1.0.0"
   },
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "registry": "http://registry.npmjs.org/",
+    "license": {
+      "exclude": [
+        "lib",
+        "src",
+        "test"
+      ]
+    }
   },
   "scripts": {
     "build": "rm -rf lib && coffee -cbo lib src",
