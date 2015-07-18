@@ -1,3 +1,7 @@
+'use strict'
+
+# istanbul ignore file
+
 # We use optimist for parsing the CLI arguments
 fs = require('fs')
 pullquoter = require('./pullquoter')
@@ -32,20 +36,20 @@ if argv.help
 
 file = argv._.shift()
 numberOfQuotes = argv.number || 1
-text = ""
+text = ''
 
 if file
   text = fs.readFileSync(file).toString()
-  process.stdout.write(pullquoter(text, numberOfQuotes).join("\n"))
-  process.stdout.write("\n")
+  process.stdout.write(pullquoter(text, numberOfQuotes).join('\n'))
+  process.stdout.write('\n')
 else
   process.stdin.setEncoding('utf8')
 
-  process.stdin.on 'readable', () ->
+  process.stdin.on 'readable', ->
     chunk = process.stdin.read()
     if (chunk != null)
       text += chunk
 
-  process.stdin.on 'end', () ->
-    process.stdout.write(pullquoter(text, numberOfQuotes).join("\n"))
-    process.stdout.write("\n")
+  process.stdin.on 'end', ->
+    process.stdout.write(pullquoter(text, numberOfQuotes).join('\n'))
+    process.stdout.write('\n')
