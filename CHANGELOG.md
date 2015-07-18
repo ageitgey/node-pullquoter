@@ -1,6 +1,9 @@
+0.2.0
+-----
+npub hates me
+
 0.1.0
 -----
-44c5b5f Exclude everything because npub annoys me
 5d2f4a0 Switch to plain coffeescript
 95366da Update CHANGELOG.md
 
