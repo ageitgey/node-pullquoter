@@ -32,7 +32,7 @@
     "lodash": "~2.4.1",
     "optimist": "~0.6.1",
     "natural": "~0.1.27",
-    "mathjs": "~0.25.0",
+    "mathjs": "^4.2.2",
     "memoizee": "~0.3.5",
     "stopwords": "0.0.4"
   },
