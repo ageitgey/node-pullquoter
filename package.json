@@ -64,8 +64,7 @@
     "pretest": "npm run build",
     "test": "npm run test-run",
     "test-run": "coffeelint src test && mocha && istanbul check-coverage",
-    "coverage": "istanbul report && opn --no-wait coverage/lcov-report/index.html",
-    "posttest": "npub verify"
+    "coverage": "istanbul report && opn --no-wait coverage/lcov-report/index.html"
   },
   "licenses": [
     {
