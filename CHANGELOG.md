@@ -1,3 +1,7 @@
+1.0.0
+-----
+Bump dependency versions for security issues.
+
 0.3.0
 -----
 npub :'(
